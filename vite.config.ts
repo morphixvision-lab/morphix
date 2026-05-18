@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig(() => ({
-  base: "/morphix-vision-creative-hub/", // 🔥 REQUIRED FOR GITHUB PAGES
+  base: "/morphix/",
 
   server: {
     host: "::",
