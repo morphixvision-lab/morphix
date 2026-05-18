@@ -65,7 +65,7 @@ const About = () => {
             <div className="grid sm:grid-cols-2 gap-4 pt-4">
               {[
                 { title: "Websocial · 2024", role: "Creative Designer" },
-                { title: "Shreeji Films · '22–'23", role: "Junior Designer" },
+                { title: "Viman Media · '22–'23", role: "Associate Designer" },
               ].map((x) => (
                 <TiltCard key={x.title} intensity={5} lift={4}>
                   <div className="glass-card shine rounded-2xl p-5 hover:border-primary/40 transition-colors duration-500">
