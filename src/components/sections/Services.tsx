@@ -6,26 +6,26 @@ const services = [
   {
     icon: Palette,
     title: "Branding & Logo Design",
-    desc: "Identity systems, logos & brand guidelines that capture the essence of your business.",
-    tags: ["Logo", "Identity", "Guidelines"],
+    desc: "Logos, strategy, visual systems & premium branding crafted to make your business instantly recognizable.",
+    tags: ["Identity", "Strategy", "Guidelines"],
   },
   {
     icon: Share2,
     title: "Social Media Creatives",
-    desc: "Scroll-stopping posts, stories & carousels that build engaged communities.",
-    tags: ["Posts", "Stories", "Carousels"],
+    desc: "High-performing social media creatives, reels, stories & campaigns designed for engagement.",
+    tags: ["Posts", "Reels", "Stories", "Campaigns", "Carousels"],
   },
   {
     icon: Film,
     title: "Video Editing & Ads",
-    desc: "Cinematic edits, motion graphics & high-converting video ads that perform.",
-    tags: ["Reels", "Ads", "Motion"],
+    desc: "Cinematic edits, motion graphics, ads & transitions that bring brands to life visually.",
+    tags: ["Cinematic", "Motion", "Ads"],
   },
   {
     icon: Printer,
     title: "Creative Prints",
-    desc: "Brochures, business cards, wedding invites — premium print-ready design.",
-    tags: ["Print", "Cards", "Brochures"],
+    desc: "Premium brochures, menus, packaging & print designs that feel modern and professional.",
+    tags: ["Packaging", "Flyers", "Menus", "Brochures"],
   },
 ];
 
@@ -36,15 +36,15 @@ const Services = () => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
           <Reveal>
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">
-              ◇ Services
+              ◇ Our Capabilities
             </div>
             <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.05] max-w-2xl">
-              Everything your <span className="text-gradient-brand">brand</span> needs to be seen.
+              Where <span className="text-gradient-brand">Strategy, Creativity</span> & Motion Come Together.
             </h2>
           </Reveal>
           <Reveal delay={150}>
             <p className="max-w-sm text-muted-foreground">
-              Four core disciplines, one obsession: design that moves the needle.
+              Creative systems crafted for modern brands that want to stand out online and offline.
             </p>
           </Reveal>
         </div>

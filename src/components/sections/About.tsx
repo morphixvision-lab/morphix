@@ -34,8 +34,8 @@ const About = () => {
             </div>
             {/* Floating tag */}
             <div className="absolute -top-4 -right-4 float-slow glass-card rounded-2xl px-5 py-3 shadow-glow-soft">
-              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Available for</div>
-              <div className="text-sm font-display font-semibold">New Projects 2026</div>
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Available</div>
+              <div className="text-sm font-display font-semibold">Worldwide</div>
             </div>
           </TiltCard>
         </Reveal>
@@ -46,26 +46,26 @@ const About = () => {
               ◇ About the Studio
             </div>
             <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
-              A passionate creative <br />
-              crafting{" "}
-              <span className="text-gradient-brand">impactful visuals</span>.
+              Building{" "}
+              <span className="text-gradient-brand">Future-Ready Brands</span>
+              <br />
+              Through Creative Innovation.
             </h2>
           </Reveal>
 
           <Reveal delay={120}>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-              I'm Manish — a self-made designer & video editor who pauses at
-              every billboard, imagining how to elevate it. Morphix Vision is
-              built on that obsession: creating designs that bring smiles,
-              build trust, and convert audiences into customers.
+              From startups to established businesses, I help brands grow
+              digitally through premium visuals, social campaigns, branding,
+              and motion experiences.
             </p>
           </Reveal>
 
           <Reveal delay={220}>
             <div className="grid sm:grid-cols-2 gap-4 pt-4">
               {[
-                { title: "Websocial · 2024", role: "Creative Designer" },
-                { title: "Viman Media · '22–'23", role: "Associate Designer" },
+                { title: "MORPHIX VISION • FOUNDER", role: "Creative Direction & Branding" },
+                { title: "FREELANCE CREATIVE", role: "Social Media & Motion Design" },
               ].map((x) => (
                 <TiltCard key={x.title} intensity={5} lift={4}>
                   <div className="glass-card shine rounded-2xl p-5 hover:border-primary/40 transition-colors duration-500">
@@ -81,7 +81,7 @@ const About = () => {
 
           <Reveal delay={320}>
             <div className="flex flex-wrap gap-2 pt-4">
-              {["Photoshop", "Illustrator", "Premiere Pro", "After Effects", "Lightroom", "Corel Draw", "InDesign"].map((t, i) => (
+              {["UI Design", "Motion Graphics", "Video Editing", "Creative Strategy", "Advertising"].map((t, i) => (
                 <span
                   key={t}
                   className="text-xs px-3 py-1.5 rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-gradient-brand-soft hover:-translate-y-0.5 transition-all duration-300"
