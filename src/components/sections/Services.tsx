@@ -8,32 +8,24 @@ const services = [
     title: "Branding & Logo Design",
     desc: "Identity systems, logos & brand guidelines that capture the essence of your business.",
     tags: ["Logo", "Identity", "Guidelines"],
-    from: "₹8,000",
-    unit: "per project",
   },
   {
     icon: Share2,
     title: "Social Media Creatives",
     desc: "Scroll-stopping posts, stories & carousels that build engaged communities.",
     tags: ["Posts", "Stories", "Carousels"],
-    from: "₹12,000",
-    unit: "per month",
   },
   {
     icon: Film,
     title: "Video Editing & Ads",
     desc: "Cinematic edits, motion graphics & high-converting video ads that perform.",
     tags: ["Reels", "Ads", "Motion"],
-    from: "₹3,500",
-    unit: "per reel",
   },
   {
     icon: Printer,
     title: "Creative Prints",
     desc: "Brochures, business cards, wedding invites — premium print-ready design.",
     tags: ["Print", "Cards", "Brochures"],
-    from: "₹2,500",
-    unit: "per design",
   },
 ];
 
@@ -90,17 +82,6 @@ const Services = () => {
                       ))}
                     </div>
 
-                    <div className="mt-6 pt-5 border-t border-border flex items-baseline justify-between">
-                      <div>
-                        <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Starting at</div>
-                        <div className="font-display text-xl font-bold text-gradient-brand leading-tight">
-                          {s.from}
-                        </div>
-                      </div>
-                      <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                        {s.unit}
-                      </div>
-                    </div>
                   </article>
                 </TiltCard>
               </Reveal>
