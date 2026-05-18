@@ -72,11 +72,11 @@ const Clients = () => {
         <Reveal>
           <div className="text-center mb-14">
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-3">
-              ◇ Trusted By
+              ◇ Brands We Elevated
             </div>
             <h2 className="font-display text-2xl md:text-3xl text-muted-foreground">
-              Brands that chose to{" "}
-              <span className="text-foreground">stand out</span>.
+              From Local Businesses To{" "}
+              <span className="text-foreground">Recognizable Brands</span>.
             </h2>
           </div>
         </Reveal>
@@ -129,10 +129,10 @@ const Clients = () => {
         <Reveal delay={150}>
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-border rounded-3xl overflow-hidden border border-border">
             {[
-              { end: 30, suffix: "+", v: "Brands" },
-              { end: 100, suffix: "+", v: "Projects" },
-              { end: 60, suffix: "K+", v: "Followers Reached" },
-              { end: 100, suffix: "%", v: "On-time Delivery" },
+              { end: 70, suffix: "+", v: "Happy Clients" },
+              { end: 300, suffix: "+", v: "Creative Assets" },
+              { end: 90, suffix: "K+", v: "Social Growth" },
+              { end: 100, suffix: "%", v: "Premium Quality" },
             ].map((s) => (
               <div
                 key={s.v}

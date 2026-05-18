@@ -119,31 +119,29 @@ const Hero = () => {
           <div className="flex flex-wrap items-center gap-3 mb-8">
             <div className="inline-flex items-center gap-2 rounded-full glass-card px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-muted-foreground">
               <span className="h-1.5 w-1.5 rounded-full bg-neon shadow-[0_0_10px_hsl(var(--neon))]" />
-              Premium Creative Studio
+              Next-Gen Creative Studio
             </div>
             <div className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
               <MapPin className="h-3 w-3 text-primary" />
-              Bhuj, India
+              India
             </div>
           </div>
 
           <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[1.02] tracking-tight">
             <Word delay={0}>We</Word>{" "}
-            <Word delay={90}>Design</Word>{" "}
+            <Word delay={90}>Create</Word>{" "}
             <br className="hidden sm:block" />
             <Word delay={180} className="text-gradient-brand">
-              Experiences
+              Digital Energy
             </Word>{" "}
-            <Word delay={270}>That</Word>{" "}
             <br className="hidden sm:block" />
-            <Word delay={360} className="italic font-light">
-              Convert.
+            <Word delay={270} className="italic font-light">
+              for Brands.
             </Word>
           </h1>
 
           <p className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Morphix Vision helps brands stand out with powerful design &
-            storytelling — branding, social, video & print, crafted with intent.
+            Bold visuals. Smart storytelling. Creative systems that help brands grow faster and connect deeper.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -169,16 +167,16 @@ const Hero = () => {
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-brand">
                 <Play className="h-3 w-3 fill-primary-foreground text-primary-foreground" />
               </span>
-              View Work
+              Discover More
             </a>
           </div>
 
           {/* Quick stats */}
           <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg">
             {[
-              { end: 50, suffix: "+", v: "Brands Crafted" },
-              { end: 3, suffix: "+", v: "Years Experience" },
-              { end: 10, suffix: "+", v: "Industries" },
+              { end: 100, suffix: "+", v: "Projects Delivered" },
+              { end: 5, suffix: "+", v: "Years Experience" },
+              { end: 20, suffix: "+", v: "Industries Served" },
             ].map((s) => (
               <div key={s.v} className="group">
                 <div className="font-display text-3xl font-bold text-gradient-brand transition-transform duration-500 group-hover:scale-110 origin-left inline-block">
