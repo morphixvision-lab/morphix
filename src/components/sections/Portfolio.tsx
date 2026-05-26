@@ -10,6 +10,9 @@ import logoVimanMedia from "@/assets/portfolio/logo-viman-media.jpg";
 import logoAnantam from "@/assets/portfolio/logo-anantam.jpg";
 import logoSbArgon from "@/assets/portfolio/logo-sb-argon.jpg";
 import logoVmBuilding from "@/assets/portfolio/logo-vm-building.jpg";
+import logoDivu from "@/assets/portfolio/logo-divu.jpg";
+import logoRasa from "@/assets/portfolio/logo-rasa.jpg";
+import logoGorasiya from "@/assets/portfolio/logo-gorasiya.jpg";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -22,11 +25,14 @@ type Item = {
 };
 
 const items: Item[] = [
-  { src: logoDellure,    title: "Dêllure",              client: "Cafe & Dessert Studio"  },
-  { src: logoVimanMedia, title: "Viman Media",           client: "Media & Photography"    },
-  { src: logoAnantam,    title: "Anantam Bungalows",     client: "Real Estate Branding",  tall: true },
-  { src: logoSbArgon,    title: "SB Argon",              client: "Industrial Identity"    },
-  { src: logoVmBuilding, title: "VM Building Chemicals", client: "Construction Branding"  },
+  { src: logoDellure,    title: "Dêllure",              client: "Cafe & Dessert Studio"     },
+  { src: logoVimanMedia, title: "Viman Media",           client: "Media & Photography"       },
+  { src: logoAnantam,    title: "Anantam Bungalows",     client: "Real Estate Branding", tall: true },
+  { src: logoSbArgon,    title: "SB Argon",              client: "Industrial Identity"       },
+  { src: logoVmBuilding, title: "VM Building Chemicals", client: "Construction Branding"     },
+  { src: logoDivu,       title: "Consultancy by Divu",   client: "Real Estate Consultancy"   },
+  { src: logoRasa,       title: "Rasa Restro Cafe",      client: "Food & Beverage Branding"  },
+  { src: logoGorasiya,   title: "Gorasiya Sewa Foundation", client: "NGO Branding"           },
 ];
 
 const onTiltMove = (e: MouseEvent<HTMLElement>) => {
