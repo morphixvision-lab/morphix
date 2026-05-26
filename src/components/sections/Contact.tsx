@@ -79,6 +79,9 @@ const Contact = () => {
   const selectCls =
     "mt-2 w-full bg-transparent border-0 border-b border-border focus:border-primary outline-none py-2 text-foreground transition-colors [color-scheme:dark]";
 
+  // Native <option> elements don't inherit CSS well — force dark bg/text via inline style
+  const optStyle: React.CSSProperties = { backgroundColor: "#1c1208", color: "#ffffff" };
+
   return (
     <section id="contact" className="relative py-32 overflow-hidden">
       <div
@@ -206,9 +209,9 @@ const Contact = () => {
                     required
                     className={selectCls}
                   >
-                    <option value="" disabled>Select…</option>
+                    <option value="" disabled style={optStyle}>Select…</option>
                     {projectTypes.map((p) => (
-                      <option key={p} value={p}>{p}</option>
+                      <option key={p} value={p} style={optStyle}>{p}</option>
                     ))}
                   </select>
                 </label>
@@ -220,9 +223,9 @@ const Contact = () => {
                     required
                     className={selectCls}
                   >
-                    <option value="" disabled>Select…</option>
+                    <option value="" disabled style={optStyle}>Select…</option>
                     {budgets.map((b) => (
-                      <option key={b} value={b}>{b}</option>
+                      <option key={b} value={b} style={optStyle}>{b}</option>
                     ))}
                   </select>
                 </label>
@@ -234,9 +237,9 @@ const Contact = () => {
                     required
                     className={selectCls}
                   >
-                    <option value="" disabled>Select…</option>
+                    <option value="" disabled style={optStyle}>Select…</option>
                     {timelines.map((t) => (
-                      <option key={t} value={t}>{t}</option>
+                      <option key={t} value={t} style={optStyle}>{t}</option>
                     ))}
                   </select>
                 </label>
