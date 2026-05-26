@@ -1,62 +1,33 @@
-import { useRef, useState, MouseEvent } from "react";
+import { useRef, MouseEvent } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-import Reveal from "@/components/Reveal";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import logoRoyalBlush from "@/assets/portfolio/logo-royal-blush.jpg";
-import logoSis from "@/assets/portfolio/logo-sis-mug.jpg";
-import logoEhouse from "@/assets/portfolio/logo-e-house.jpg";
-import logoEnvy from "@/assets/portfolio/logo-envy.jpg";
-import logoRadhe from "@/assets/portfolio/logo-radhe.jpg";
-import logoFabie from "@/assets/portfolio/logo-fabie.jpg";
-
-import socialEndeavour from "@/assets/portfolio/social-endeavour.jpg";
-import socialHulk from "@/assets/portfolio/social-hulk.jpg";
-import socialHulkPost from "@/assets/portfolio/social-hulk-post.jpg";
-
-import videoBridal from "@/assets/portfolio/video-bridal.jpg";
-import videoSaree from "@/assets/portfolio/video-saree.jpg";
-import videoPhysio from "@/assets/portfolio/video-physio.jpg";
-import videoWomen from "@/assets/portfolio/video-women.jpg";
-
-import printRudraj from "@/assets/portfolio/print-rudraj-card.jpg";
-import printBrochure from "@/assets/portfolio/print-brochure.jpg";
+import logoDellure from "@/assets/portfolio/logo-dellure.jpg";
+import logoVimanMedia from "@/assets/portfolio/logo-viman-media.jpg";
+import logoAnantam from "@/assets/portfolio/logo-anantam.jpg";
+import logoSbArgon from "@/assets/portfolio/logo-sb-argon.jpg";
+import logoVmBuilding from "@/assets/portfolio/logo-vm-building.jpg";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
-
-type Cat = "All" | "Logo" | "Social" | "Video" | "Print";
 
 type Item = {
   src: string;
   title: string;
   client: string;
-  cat: Cat;
   tall?: boolean;
   caseStudy?: string;
 };
 
 const items: Item[] = [
-  { src: logoRoyalBlush, title: "Royal Blush", client: "Identity & Logo", cat: "Logo", tall: true },
-  { src: socialEndeavour, title: "Manali · Leh · Srinagar", client: "Endeavour Ladakh", cat: "Social", caseStudy: "endeavour-ladakh" },
-  { src: videoPhysio, title: "7 Benefits of Physiotherapy", client: "Swasthya Clinic", cat: "Video", caseStudy: "swasthya-physiotherapy" },
-  { src: printRudraj, title: "Business Card System", client: "Rudraj Immigration", cat: "Print", tall: true },
-  { src: socialHulk, title: "Muscle 8 Iso Hydro", client: "Hulk Nutrition", cat: "Social", caseStudy: "hulk-nutrition" },
-  { src: logoSis, title: "SIS Brand Mug", client: "Brand Identity", cat: "Logo" },
-  { src: videoBridal, title: "Bridal Wedding Lehenga", client: "Saree Collection", cat: "Video" },
-  { src: logoEhouse, title: "e — House Mark", client: "Real Estate Logo", cat: "Logo" },
-  { src: socialHulkPost, title: "Nutrition Facts Carousel", client: "Hulk Nutrition", cat: "Social", tall: true, caseStudy: "hulk-nutrition" },
-  { src: videoWomen, title: "8 Factors · Women Health", client: "Wellness Reel", cat: "Video", caseStudy: "swasthya-physiotherapy" },
-  { src: printBrochure, title: "Hazardous Waste Brochure", client: "The Leela Corporation", cat: "Print" },
-  { src: logoEnvy, title: "Envy Designs", client: "Architecture Logo", cat: "Logo" },
-  { src: logoRadhe, title: "Radhe Jewellery", client: "Jewellery Branding", cat: "Logo" },
-  { src: videoSaree, title: "Party Wear Saree", client: "Saree Collection", cat: "Video" },
-  { src: logoFabie, title: "Fabie Fashion", client: "Apparel Branding", cat: "Logo" },
+  { src: logoDellure,    title: "Dêllure",              client: "Cafe & Dessert Studio"  },
+  { src: logoVimanMedia, title: "Viman Media",           client: "Media & Photography"    },
+  { src: logoAnantam,    title: "Anantam Bungalows",     client: "Real Estate Branding",  tall: true },
+  { src: logoSbArgon,    title: "SB Argon",              client: "Industrial Identity"    },
+  { src: logoVmBuilding, title: "VM Building Chemicals", client: "Construction Branding"  },
 ];
-
-const cats: Cat[] = ["All", "Logo", "Social", "Video", "Print"];
 
 const onTiltMove = (e: MouseEvent<HTMLElement>) => {
   const el = e.currentTarget;
@@ -81,8 +52,6 @@ const onTiltLeave = (e: MouseEvent<HTMLElement>) => {
 
 const Portfolio = () => {
   const root = useRef<HTMLElement>(null);
-  const [active, setActive] = useState<Cat>("All");
-  const filtered = active === "All" ? items : items.filter((i) => i.cat === active);
 
   useGSAP(
     () => {
@@ -151,13 +120,13 @@ const Portfolio = () => {
         window.removeEventListener("load", refresh);
       };
     },
-    { scope: root, dependencies: [active] }
+    { scope: root }
   );
 
   return (
     <section id="work" ref={root} className="relative py-32">
       <div className="container">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
+        <div className="mb-12">
           <div className="js-portfolio-title">
             <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">
               ◇ Selected Work
@@ -166,31 +135,12 @@ const Portfolio = () => {
               Crafted with <span className="text-gradient-brand">intent</span>, built to perform.
             </h2>
           </div>
-
-          <Reveal delay={150}>
-            <div className="flex flex-wrap gap-2">
-              {cats.map((c) => (
-                <button
-                  key={c}
-                  onClick={() => setActive(c)}
-                  className={`text-xs uppercase tracking-wider px-4 py-2 rounded-full border transition-all duration-300 ${
-                    active === c
-                      ? "bg-gradient-brand text-primary-foreground border-transparent shadow-glow-soft"
-                      : "border-border text-muted-foreground hover:text-foreground hover:border-primary/50"
-                  }`}
-                >
-                  {c}
-                </button>
-              ))}
-            </div>
-          </Reveal>
         </div>
 
         <div
-          key={active}
           className="js-portfolio-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 [grid-auto-flow:dense]"
         >
-          {filtered.map((item, i) => {
+          {items.map((item, i) => {
             const content = (
               <>
                 <div className="js-portfolio-img-wrap absolute inset-0 overflow-hidden rounded-[inherit]">
@@ -217,10 +167,6 @@ const Portfolio = () => {
                 )}
 
                 <div className="absolute inset-0 p-6 flex flex-col justify-end z-10">
-                  <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-primary mb-2">
-                    <span className="h-1 w-1 rounded-full bg-primary" />
-                    {item.cat}
-                  </div>
                   <div className="font-display text-xl md:text-2xl font-semibold leading-tight">
                     {item.title}
                   </div>
@@ -243,10 +189,8 @@ const Portfolio = () => {
                 "perspective(1100px) translateY(var(--lift, 0px)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))",
             };
 
-            const wrapperCls = `js-portfolio-card ${item.tall ? "sm:row-span-2" : ""}`;
-
             return (
-              <div key={`${item.title}-${item.client}-${i}`} className={wrapperCls}>
+              <div key={`${item.title}-${item.client}-${i}`} className={`js-portfolio-card ${item.tall ? "sm:row-span-2" : ""}`}>
                 {item.caseStudy ? (
                   <Link
                     to={`/case-study/${item.caseStudy}`}
